@@ -20,6 +20,10 @@ app.get('/', (req, res) => {
     res.send('main root entry index reached')
 })
 
+// BOOKS 
+const booksController = require('./controllers/books_controller')
+app.use('/books', booksController)
+
 // LISTEN
 app.listen(PORT, () => {
     console.log(`Listening on port:`, PORT)
